@@ -1,15 +1,14 @@
 package ru.job4j.array;
 
-import static java.lang.Character.isDigit;
+import static java.lang.Character.*;
 
 public class JavaNameValidator {
     public static boolean isNameValid(String name) {
-        boolean valid = !name.isEmpty();
-        for (int i = 0; i < name.length(); i++) {
+        boolean valid = !name.isEmpty() && isLowerCase(name.codePointAt(0));
+        for (int i = 1; i < name.length(); i++) {
             int code = name.codePointAt(i);
-            if ((i == 0 && !isLowerLatinLetter(code))
-                    || (!isLowerLatinLetter(code) && !isSpecialSymbol(code)
-                    && !isUpperLatinLetter(code) && !isDigit(code))) {
+            if (!isLowerLatinLetter(code) && !isSpecialSymbol(code)
+                    && !isUpperLatinLetter(code) && !isDigit(code)) {
                 valid = false;
                 break;
             }
