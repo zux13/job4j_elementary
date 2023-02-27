@@ -29,6 +29,7 @@ public class MatrixTest {
         };
         assertThat(result).isDeepEqualTo(expected);
     }
+
     @Test
     public void when9on9() {
         int size = 9;
