@@ -40,4 +40,27 @@ public class MaxTest {
         int expected = 4;
         assertThat(result).isEqualTo(expected);
     }
+
+    @Test
+    public void whenMax4893Then9() {
+        int first = 4;
+        int second = 8;
+        int third = 9;
+        int fourth = 3;
+        int result = Max.max(first, second, third, fourth);
+        int expected = 9;
+        assertThat(result).isEqualTo(expected);
+    }
+
+    @Test
+    public void whenMax0702Then7() {
+        int first = 0;
+        int second = 7;
+        int third = 0;
+        int fourth = 2;
+        int result = Max.max(first, second, third, fourth);
+        int expected = 7;
+        assertThat(result).isEqualTo(expected);
+    }
+
 }
