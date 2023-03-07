@@ -42,6 +42,26 @@ public class MaxTest {
     }
 
     @Test
+    public void whenMax693Then9() {
+        int first = 6;
+        int second = 9;
+        int third = 3;
+        int result = Max.max(first, second, third);
+        int expected = 9;
+        assertThat(result).isEqualTo(expected);
+    }
+
+    @Test
+    public void whenMax123Then3() {
+        int first = 1;
+        int second = 2;
+        int third = 3;
+        int result = Max.max(first, second, third);
+        int expected = 3;
+        assertThat(result).isEqualTo(expected);
+    }
+
+    @Test
     public void whenMax4893Then9() {
         int first = 4;
         int second = 8;
